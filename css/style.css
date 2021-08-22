@@ -1,3 +1,12 @@
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-block, .right-block{
+    width: 50%;
+}
+
 .square_1{
     width: 100px;
     height: 100px;
@@ -98,7 +107,7 @@
 }
 
 .square_5{
-    margin-top: 10px;
+    margin-top: 100px;
     width: 100px;
     height: 100px;
     border: 5px solid rgb(221, 24, 205);
@@ -142,7 +151,7 @@
 }
 
 .progress{
-    margin-top: 180px;
+    margin-top: 20px;
     width: 400px;
     height: 30px;
     border: 2px solid red;
@@ -156,38 +165,186 @@
 }
 
 @keyframes progress {
-    @for $i from 1 to 100 {
-        {&i}% {
-            width: {&i}%;
-        }
+    0% {
+        width: 0%;
     }
+    10% {
+        width: 10%;
+    }
+    20% {
+        width: 20%;
+    }
+    30% {
+        width: 30%;
+    }
+    40% {
+        width: 40%;
+    }
+    50% {
+        width: 50%;
+    }
+    60% {
+        width: 60%;
+    }
+    70% {
+        width: 70%;
+    }
+    80% {
+        width: 80%;
+    }
+    90% {
+        width: 90%;
+    }
+    100%{
+        width: 100%;
+    }
+}
 
-    
-    // 20% {
-    //     width: 20%;
-    // }
-    // 30% {
-    //     width: 30%;
-    // }
-    // 40% {
-    //     width: 40%;
-    // }
-    // 50% {
-    //     width: 50%;
-    // }
-    // 60% {
-    //     width: 60%;
-    // }
-    // 70% {
-    //     width: 70%;
-    // }
-    // 80% {
-    //     width: 80%;
-    // }
-    // 90% {
-    //     width: 90%;
-    // }
-    // 100%{
-    //     width: 100%;
-    // }
+.progress_2{
+    margin-top: 20px;
+    width: 400px;
+    height: 30px;
+    border: 2px solid red;
+}
+
+.progress-bar_2{
+    background-color: red;
+    animation: progress 5s;
+    height: 100%;
+    -webkit-animation: progress 5s;
+    animation-iteration-count: infinite;
+}
+
+.field{
+    border: 2px solid grey;
+    margin-top: 20px;
+    width: 400px;
+    height: 400px;
+}
+
+.ball{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    animation: ball 10s;
+    -webkit-animation: ball 10s;
+    animation-iteration-count: 1;
+ 
+}
+
+@keyframes ball {
+    30% {
+        transform: translate(100px, 360px);
+        -webkit-transform: translate(100px, 360px);
+        -moz-transform: translate(100px, 360px);
+        -ms-transform: translate(100px, 360px);
+        -o-transform: translate(100px, 360px);
+        animation-name: bounce;
+}
+
+    45%{
+        transform: translate(150px, 260px);
+        -webkit-transform: translate(150px, 260px);
+        -moz-transform: translate(150px, 260px);
+        -ms-transform: translate(150px, 260px);
+        -o-transform: translate(150px, 260px);
+}
+
+    55%{
+        transform: translate(200px, 360px);
+        -webkit-transform: translate(200px, 360px);
+        -moz-transform: translate(200px, 360px);
+        -ms-transform: translate(200px, 360px);
+        -o-transform: translate(200px, 360px);
+        animation-name: bounce;
+}
+
+    65%{
+        transform: translate(240px, 315px);
+        -webkit-transform: translate(240px, 315px);
+        -moz-transform: translate(240px, 315px);
+        -ms-transform: translate(240px, 315px);
+        -o-transform: translate(240px, 315px);
+}
+
+    75%{
+        transform: translate(270px, 360px);
+        -webkit-transform: translate(270px, 360px);
+        -moz-transform: translate(270px, 360px);
+        -ms-transform: translate(270px, 360px);
+        -o-transform: translate(270px, 360px);
+        animation-name: bounce;
+}
+
+    85%{
+        transform: translate(300px, 330px);
+        -webkit-transform: translate(300px, 330px);
+        -moz-transform: translate(300px, 330px);
+        -ms-transform: translate(300px, 330px);
+        -o-transform: translate(300px, 330px);
+}
+
+    100%{
+        transform: translate(320px, 360px);
+        -webkit-transform: translate(320px, 360px);
+        -moz-transform: translate(320px, 360px);
+        -ms-transform: translate(320px, 360px);
+        -o-transform: translate(320px, 360px);
+        animation-name: bounce;
+}
+}
+
+.but{
+    margin-top: 20px;
+    width: 60px;
+    height: 40px;
+    background-color: rgb(19, 162, 206);
+}
+
+.but:hover{
+    animation: but 3s;
+    -webkit-animation: but 3s;
+
+}
+
+@keyframes  but {
+    0% {
+        width: 60px;
+    }
+    10% {
+        width: 90px;
+    }
+    20% {
+        width: 120px;
+    }
+    30% {
+        width: 150px;
+    }
+    40% {
+        width: 180px;
+    }
+    50% {
+        width: 210px;
+    }
+    60% {
+        width: 240px;
+    }
+    70% {
+        width: 280px;
+    }
+    80% {
+        width: 320px;
+    }
+    90% {
+        width: 360px;
+    }
+    100%{
+        width: 400px;
+        animation-name: slide;
+    }
 }
